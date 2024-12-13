@@ -5,8 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = "dialect://root:radhasoami@localhost:port/cmt"
-
-
+db=SQLALCHEMY(app)
 @app.route("/")
 def hello_world():
     return render_template('index.html')
